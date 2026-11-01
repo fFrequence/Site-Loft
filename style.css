@@ -1,7 +1,4 @@
-/* =========================================================
-   LE LOFT × L'AS VTC · Feuille de style partagée
-   Palette : noir profond + or | Élégant, aéré, moderne
-   ========================================================= */
+/* Le Loft & L'AS VTC */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap');
 
@@ -38,7 +35,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Texture / grain subtil sur le fond */
+/* halos dorés en fond */
 body::before {
   content: "";
   position: fixed;
@@ -52,7 +49,7 @@ body::before {
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 
-/* ============ TYPOGRAPHIE ============ */
+/* typo */
 h1, h2, h3 { font-family: var(--display); font-weight: 500; letter-spacing: 0.04em; line-height: 1.2; }
 
 .script {
@@ -70,7 +67,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 500; letter-spacing: 0.04
   font-weight: 400;
 }
 
-/* ============ ORNEMENT DORÉ (séparateur) ============ */
+/* séparateur sous les titres */
 .divider {
   display: flex;
   align-items: center;
@@ -92,11 +89,10 @@ h1, h2, h3 { font-family: var(--display); font-weight: 500; letter-spacing: 0.04
   box-shadow: 0 0 12px rgba(212,175,55,0.5);
 }
 
-/* ============ LAYOUT ============ */
 .wrap { width: 90%; max-width: var(--maxw); margin: 0 auto; position: relative; z-index: 1; }
 section { padding: 90px 0; position: relative; z-index: 1; }
 
-/* ============ HEADER / NAV ============ */
+/* header + nav */
 header {
   position: sticky; top: 0; z-index: 100;
   background: rgba(8,8,10,0.82);
@@ -137,7 +133,7 @@ header {
 .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background:none; border:none; }
 .burger span { width: 26px; height: 2px; background: var(--gold); transition: .3s; }
 
-/* ============ HERO ============ */
+/* hero */
 .hero {
   min-height: 86vh;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -167,7 +163,7 @@ header {
 }
 .hero-actions { margin-top: 38px; display:flex; gap:16px; flex-wrap:wrap; justify-content:center; animation: fadeUp 1s ease .6s both; }
 
-/* ============ BOUTONS ============ */
+/* boutons */
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase;
@@ -180,7 +176,7 @@ header {
 .btn-wa { background: #1faf54; color: #fff; border: none; }
 .btn-wa:hover { background: #25c563; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,197,99,0.3); }
 
-/* ============ SECTION HEADERS ============ */
+/* titres de section */
 .section-head { text-align: center; margin-bottom: 50px; }
 .section-head h2 {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -188,7 +184,7 @@ header {
 }
 .section-head p { color: var(--grey); margin-top: 10px; }
 
-/* ============ DEUX UNIVERS (cards accueil) ============ */
+/* les deux cartes de l'accueil */
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 .duo-card {
   background: linear-gradient(160deg, var(--black-2), var(--black));
@@ -201,12 +197,11 @@ header {
   border-radius:3px; pointer-events:none;
 }
 .duo-card:hover { transform: translateY(-6px); border-color: var(--gold); }
-.duo-card .ic { font-size: 2.4rem; color: var(--gold); margin-bottom: 16px; }
 .duo-card h3 { font-size: 1.6rem; color: var(--gold-soft); margin-bottom: 6px; }
 .duo-card .sub { font-family: var(--serif); font-style: italic; color: var(--grey); margin-bottom: 18px; }
 .duo-card p { color: var(--cream); opacity: 0.78; font-size: 0.95rem; margin-bottom: 26px; }
 
-/* ============ GRILLE TARIFS ============ */
+/* tarifs */
 .price-block { margin-bottom: 46px; }
 .price-block h3 {
   font-size: 1.25rem; color: var(--gold); letter-spacing: 0.18em; text-transform: uppercase;
@@ -223,7 +218,7 @@ header {
 .price-row .val { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--gold-soft); white-space: nowrap; }
 .price-note { color: var(--grey); font-size: 0.85rem; margin-top: 14px; font-style: italic; }
 
-/* Carte encadrée dorée (pour tarifs en exergue) */
+/* cadre doré autour des grilles de prix et du formulaire */
 .gold-frame {
   border: 1px solid var(--gold);
   position: relative; padding: 44px;
@@ -234,17 +229,15 @@ header {
   content:""; position:absolute; inset:7px; border:1px solid rgba(212,175,55,0.25); pointer-events:none; border-radius:2px;
 }
 
-/* ============ FEATURES / ARGUMENTS ============ */
+/* blocs de 3 colonnes */
 .features { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
-.feature { text-align: center; padding: 30px 20px; }
-.feature .ic { font-size: 1.8rem; color: var(--gold); margin-bottom: 14px; }
+.feature { text-align: center; padding: 26px 20px 30px; border-top: 1px solid var(--gold-faint); }
 .feature h4 { font-family: var(--display); color: var(--gold-soft); font-size: 1.05rem; letter-spacing: 0.06em; margin-bottom: 8px; }
 .feature p { color: var(--grey); font-size: 0.9rem; }
 
-/* ============ CONTACT / FORM ============ */
+/* contact */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
-.info-line { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 26px; }
-.info-line .ic { color: var(--gold); font-size: 1.2rem; margin-top: 3px; }
+.info-line { margin-bottom: 26px; padding-left: 16px; border-left: 1px solid var(--gold-deep); }
 .info-line .label { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grey); }
 .info-line .value { font-size: 1.05rem; color: var(--cream); }
 .info-line a.value:hover { color: var(--gold-soft); }
@@ -260,7 +253,7 @@ form input:focus, form select:focus, form textarea:focus { outline: none; border
 form textarea { resize: vertical; min-height: 110px; }
 .form-msg { margin-top: 14px; font-size: 0.9rem; color: var(--gold-soft); min-height: 20px; }
 
-/* ============ FOOTER ============ */
+/* footer */
 footer {
   border-top: 1px solid var(--gold-faint);
   padding: 50px 0 36px; text-align: center; position: relative; z-index: 1;
@@ -272,7 +265,7 @@ footer .f-links a { font-size: 0.76rem; letter-spacing: 0.16em; text-transform: 
 footer .f-links a:hover { color: var(--gold-soft); opacity: 1; }
 footer .copy { color: var(--grey); font-size: 0.78rem; margin-top: 18px; }
 
-/* ============ FLOATING WHATSAPP ============ */
+/* bouton WhatsApp fixe en bas à droite */
 .wa-float {
   position: fixed; bottom: 24px; right: 24px; z-index: 200;
   width: 58px; height: 58px; border-radius: 50%;
@@ -282,12 +275,12 @@ footer .copy { color: var(--grey); font-size: 0.78rem; margin-top: 18px; }
 .wa-float:hover { transform: scale(1.08); }
 .wa-float svg { width: 30px; height: 30px; fill: #fff; }
 
-/* ============ ANIMATIONS ============ */
+/* animations */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
-/* ============ RESPONSIVE ============ */
+/* mobile */
 @media (max-width: 860px) {
   .nav-links {
     position: fixed; inset: 78px 0 auto 0;

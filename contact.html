@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact & Réservation · Le Loft × L'AS VTC</title>
-<meta name="description" content="Réservez votre rendez-vous coiffeur/barbier ou votre trajet VTC. WhatsApp, téléphone et formulaire de contact.">
+<title>Contact et réservation, Le Loft et L'AS VTC</title>
+<meta name="description" content="Réservez un rendez-vous au salon ou une course VTC par WhatsApp, téléphone ou avec le formulaire.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="wrap nav">
-    <a href="index.html" class="brand">Le Loft<span>× L'AS VTC</span></a>
+    <a href="index.html" class="brand">Le Loft<span>&amp; L'AS VTC</span></a>
     <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav class="nav-links">
       <a href="index.html">Accueil</a>
@@ -23,43 +22,37 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero" style="min-height:48vh;">
-  <p class="eyebrow">Contact &amp; Réservation</p>
-  <h1 style="font-size:clamp(2.2rem,6vw,4.4rem);">Réservez</h1>
-  <p class="hero-sub">Salon ou chauffeur privé, en un message</p>
+  <p class="eyebrow">Contact et réservation</p>
+  <h1 style="font-size:clamp(2.2rem,6vw,4.4rem);">Réserver</h1>
+  <p class="hero-sub">Par téléphone, sur WhatsApp ou avec le formulaire</p>
 </section>
 
-<!-- CONTACT -->
 <section>
   <div class="wrap">
     <div class="contact-grid">
 
-      <!-- COLONNE INFOS -->
       <div class="reveal">
         <p class="eyebrow">Coordonnées</p>
-        <h2 style="color:var(--gold-soft); font-size:1.7rem; margin:10px 0 30px;">Parlons-en</h2>
+        <h2 style="color:var(--gold-soft); font-size:1.7rem; margin:10px 0 30px;">Nous joindre</h2>
 
         <div class="info-line">
-          <span class="ic">&#9986;</span>
           <div>
-            <div class="label">Le Loft du Valois · Salon</div>
+            <div class="label">Salon (Le Loft du Valois)</div>
             <a class="value" href="tel:0364236250">03 64 23 62 50</a><br>
             <a class="value" href="mailto:Leloftduvalois@hotmail.com">Leloftduvalois@hotmail.com</a>
           </div>
         </div>
 
         <div class="info-line">
-          <span class="ic">&#128663;</span>
           <div>
-            <div class="label">L'AS VTC · Chauffeur privé</div>
+            <div class="label">Chauffeur privé (L'AS VTC)</div>
             <a class="value" href="tel:0601104047">06 01 10 40 47</a><br>
             <a class="value" href="mailto:Las.vtc@hotmail.com">Las.vtc@hotmail.com</a>
           </div>
         </div>
 
         <div class="info-line">
-          <span class="ic">&#9906;</span>
           <div>
             <div class="label">Adresse</div>
             <span class="value">2 ter Place de la République<br>60800 Crépy-en-Valois</span>
@@ -67,36 +60,35 @@
         </div>
 
         <div style="margin-top:34px;">
-          <a href="https://wa.me/33601104047" target="_blank" class="btn btn-wa">Réserver directement via WhatsApp</a>
+          <a href="https://wa.me/33601104047" target="_blank" class="btn btn-wa">Écrire sur WhatsApp</a>
         </div>
       </div>
 
-      <!-- COLONNE FORMULAIRE -->
       <div class="reveal">
         <div class="gold-frame">
-          <p class="eyebrow">Demande de réservation</p>
-          <h2 style="color:var(--gold-soft); font-size:1.5rem; margin:10px 0 26px;">Formulaire</h2>
+          <p class="eyebrow">Formulaire</p>
+          <h2 style="color:var(--gold-soft); font-size:1.5rem; margin:10px 0 26px;">Demande de réservation</h2>
 
           <form id="reservation-form">
             <div class="field">
-              <label for="nom">Nom &amp; prénom</label>
+              <label for="nom">Nom et prénom</label>
               <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
             </div>
 
             <div class="field">
-              <label for="service">Service souhaité</label>
+              <label for="service">Service</label>
               <select id="service" name="service" required>
                 <option value="">Choisir...</option>
-                <optgroup label="Le Loft · Coiffeur / Barbier">
+                <optgroup label="Salon">
                   <option>Coupe simple</option>
                   <option>Coupe dégradé rasoir</option>
                   <option>Coupe + Barbe</option>
                   <option>Coupe + Collier</option>
                   <option>Coupe + Bouc</option>
                   <option>Barbe / Traçage</option>
-                  <option>Enfant (- 10 ans)</option>
+                  <option>Enfant (moins de 10 ans)</option>
                 </optgroup>
-                <optgroup label="L'AS VTC · Chauffeur privé">
+                <optgroup label="VTC">
                   <option>Transfert aéroport (CDG / Orly)</option>
                   <option>Mise à disposition</option>
                   <option>Forfait 4 heures</option>
@@ -107,16 +99,16 @@
             </div>
 
             <div class="field">
-              <label for="date">Date / heure souhaitée</label>
-              <input type="text" id="date" name="date" placeholder="Ex : Samedi 14h, ou 12/06 matin">
+              <label for="date">Date et heure</label>
+              <input type="text" id="date" name="date" placeholder="Ex : samedi 14h, ou 12/06 le matin">
             </div>
 
             <div class="field">
               <label for="message">Message (facultatif)</label>
-              <textarea id="message" name="message" placeholder="Précisez votre demande, lieu de prise en charge, etc."></textarea>
+              <textarea id="message" name="message" placeholder="Adresse de prise en charge, numéro de vol, etc."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center;">Envoyer via WhatsApp</button>
+            <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center;">Envoyer sur WhatsApp</button>
             <p class="form-msg"></p>
           </form>
         </div>
@@ -126,18 +118,17 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <a href="index.html" class="brand">Le Loft<span>× L'AS VTC</span></a>
+    <a href="index.html" class="brand">Le Loft<span>&amp; L'AS VTC</span></a>
     <div class="f-links">
       <a href="index.html">Accueil</a>
       <a href="loft.html">Le Loft</a>
       <a href="vtc.html">L'AS VTC</a>
       <a href="contact.html">Contact</a>
     </div>
-    <p class="copy">2 ter Place de la République, 60800 Crépy-en-Valois · Tél. 03 64 23 62 50 / 06 01 10 40 47</p>
-    <p class="copy">© Le Loft du Valois &amp; L'AS VTC · Tous droits réservés.</p>
+    <p class="copy">2 ter Place de la République, 60800 Crépy-en-Valois. Salon : 03 64 23 62 50. VTC : 06 01 10 40 47.</p>
+    <p class="copy">© Le Loft du Valois et L'AS VTC</p>
   </div>
 </footer>
 

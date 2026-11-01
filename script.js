@@ -1,4 +1,4 @@
-/* ============ Menu mobile ============ */
+// menu mobile
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 if (burger) {
@@ -8,13 +8,13 @@ if (burger) {
   );
 }
 
-/* ============ Reveal au scroll ============ */
+// apparition des blocs au scroll
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-/* ============ Formulaire de réservation -> WhatsApp ============ */
+// formulaire de contact : on envoie tout dans un message WhatsApp
 const form = document.getElementById('reservation-form');
 if (form) {
   form.addEventListener('submit', (e) => {
@@ -26,19 +26,19 @@ if (form) {
     const msgBox = document.querySelector('.form-msg');
 
     if (!nom || !service) {
-      msgBox.textContent = "Merci de renseigner au moins votre nom et le service souhaité.";
+      msgBox.textContent = "Il manque votre nom ou le service.";
       return;
     }
 
-    let txt = `Bonjour, je souhaite réserver.%0A`;
+    let txt = `Bonjour, je voudrais réserver.%0A`;
     txt += `Nom : ${encodeURIComponent(nom)}%0A`;
     txt += `Service : ${encodeURIComponent(service)}%0A`;
-    if (date) txt += `Date souhaitée : ${encodeURIComponent(date)}%0A`;
+    if (date) txt += `Date : ${encodeURIComponent(date)}%0A`;
     if (message) txt += `Message : ${encodeURIComponent(message)}`;
 
-    const phone = '33601104047'; // 06 01 10 40 47 au format international
+    const phone = '33601104047';
     window.open(`https://wa.me/${phone}?text=${txt}`, '_blank');
-    msgBox.textContent = "Ouverture de WhatsApp… Si rien ne s'ouvre, contactez-nous au 06 01 10 40 47.";
+    msgBox.textContent = "WhatsApp va s'ouvrir. Sinon, appelez le 06 01 10 40 47.";
     form.reset();
   });
 }
